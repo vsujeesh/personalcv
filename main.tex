@@ -1,0 +1,37 @@
+%%% compile with pdfLaTeX
+\documentclass[a4paper, 12pt]{article}
+
+\input{preamble}
+
+\name{John Doe}
+\emailaddr{johndoe@mit.edu}
+\phonenumber{(+00) 123-456-789}
+\linkedin{linkedin.com/in/johndoe}
+\github{github.com/jdoe}
+
+\begin{document}
+\makeheader
+\raggedright
+
+\resumesection{Experience}
+\experience{mit2}{PhD Candidate}{Massachusetts Institute of Technology}{Cambridge, Massachusetts, Boston, U.S.A}{Dec 2020}{Dec 2025}
+\detail{This is what I did}
+\nomoredetails
+
+\experience{mit2}{Undergraduate}{Massachusetts Institute of Technology}{Cambridge, Massachusetts, Boston, U.S.A}{Jan 2017}{Dec 2020}
+\detail{This is what I did}
+\nomoredetails
+
+\resumesection{Other Experience}
+
+\resumesection{Education}
+
+\resumesection{Projects}
+\project{Project Name}{Github Repository URL}
+\detail{This is what I did for the project}
+\detail{This is something else that I did}
+
+\resumesection{Skills}
+\skillset{Programming}{something, something else, \LaTeX}
+\skillset{Technologies}{something, something else, not \LaTeX}
+\end{document}

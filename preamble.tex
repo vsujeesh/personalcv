@@ -1,0 +1,63 @@
+%%% Page Margin
+\usepackage[margin=0.75in]{geometry}
+
+%%% Line spacing
+\usepackage{setspace}
+\setstretch{1.1}
+
+%%% Clear page number and other formattings
+\pagestyle{empty}
+
+%%% Set sans-serif font for document
+%\usepackage[sfdefault]{cabin}
+\usepackage[default]{opensans}
+
+%%% Use Microtypographical enhancements to improve readability
+\usepackage[expansion, protrusion]{microtype}
+
+%%% Add hyperlinks, colors and pictures to document
+\usepackage{xcolor} % add colors to text
+\usepackage{graphicx, float} % add pictures to document
+\usepackage[hidelinks]{hyperref} % add links to the addresses and numbers
+
+%%% Field definition for components of header
+\makeatletter
+\newcommand{\emailaddr}[1]{\gdef\@emailaddr{#1}}
+\newcommand{\phonenumber}[1]{\gdef\@phonenumber{#1}}
+\newcommand{\linkedin}[1]{\gdef\@linkedin{#1}}
+\newcommand{\github}[1]{\gdef\@github{#1}}
+\newcommand{\name}[1]{\gdef\@name{#1}}
+
+%%% Formatting and output of header
+\newcommand{\makeheader}{
+{\Huge\bfseries\raggedright\@name}\medskip\par\noindent
+\color{gray}\@phonenumber\quad~\@emailaddr\quad~\@linkedin\quad~\@github\bigskip\color{black}\hfill
+}
+\makeatother
+
+%%% Formatting of section header
+\newcommand{\resumesection}[1]{\par\noindent\color{gray}\noindent #1 \vspace{-10pt}\\ \rule{\textwidth}{1pt}\medskip\newline\color{black}}
+
+%%% Formatting of skills section
+\newcommand{\skillset}[2]{\noindent{\textbf{#1:}}\, #2 \smallskip\newline}
+
+%%% Formatting of projects section header
+\newcommand{\project}[2]{\noindent\textbf{#1}\,\textbar\,\textcolor{gray}{#2}\smallskip\newline}
+
+%%% Formatting of details used in all sections
+\newcommand{\detail}[1]{\noindent\textbullet\,\, #1\newline}
+
+%%% Formatting of experiences and education section
+\newcommand{\experience}[6]{\noindent
+\begin{minipage}[t]{0.1\textwidth}\centering
+\includegraphics[width=0.7\textwidth]{#1}
+%\vspace*{\fill}
+\end{minipage}%
+\begin{minipage}{0.9\textwidth}
+\textbf{#2, \textcolor{gray}{#3}}\newline
+\textcolor{gray}{#4 \,---\, \textit{#5 - #6}}\newline
+}
+
+%%% End the environment for entering details of experiences
+\newcommand{\nomoredetails}{
+\end{minipage}\medskip}
