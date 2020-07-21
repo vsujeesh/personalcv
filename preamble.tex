@@ -41,23 +41,14 @@
 %%% Formatting of skills section
 \newcommand{\skillset}[2]{\noindent{\textbf{#1:}}\, #2 \smallskip\newline}
 
-%%% Formatting of projects section header
+%%% Formatting of projects section
 \newcommand{\project}[2]{\noindent\textbf{#1}\,\textbar\,\textcolor{gray}{#2}\smallskip\newline}
 
 %%% Formatting of details used in all sections
 \newcommand{\detail}[1]{\noindent\textbullet\,\, #1\newline}
 
-%%% Formatting of experiences and education section
-\newcommand{\experience}[6]{\noindent
-\begin{minipage}[t]{0.1\textwidth}\centering
-\includegraphics[width=0.7\textwidth]{#1}
-%\vspace*{\fill}
-\end{minipage}%
-\begin{minipage}{0.9\textwidth}
-\textbf{#2, \textcolor{gray}{#3}}\newline
-\textcolor{gray}{#4 \,---\, \textit{#5 - #6}}\newline
+%%% Formatting of experiences and education sections
+\newcommand{\experience}[5]{\noindent
+\textbf{#1, \textcolor{gray}{#2}}\newline
+\textcolor{gray}{#3 \,---\, \textit{#4 - #5}}\newline
 }
-
-%%% End the environment for entering details of experiences
-\newcommand{\nomoredetails}{
-\end{minipage}\medskip}
